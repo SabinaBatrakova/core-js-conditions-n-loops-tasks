@@ -146,8 +146,18 @@ function convertNumberToString(/* numberStr */) {
  *  '0123210'   => true
  *  'qweqwe'    => false
  */
-function isPalindrome(/* str */) {
-  throw new Error('Not implemented');
+function isPalindrome(str) {
+  let i = 0;
+  let j = str.length - 1;
+
+  while (i < j) {
+    if (str[i] !== str[j]) {
+      return false;
+    }
+    i += 1;
+    j -= 1;
+  }
+  return true;
 }
 
 /**
@@ -186,7 +196,6 @@ function getIndexOf(/* str, letter */) {
 function isContainNumber(/* num, digit */) {
   throw new Error('Not implemented');
 }
-
 /**
  * Finds the index of an element in an array where the sum of elements to the left equals the sum of elements to the right.
  * If such an index does not return -1.
